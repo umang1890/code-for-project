@@ -1,0 +1,58 @@
+<h1>
+  EDIT PROFILE</h1>
+<div class="container">
+  <table>
+    <tr>
+      <td>email id:</td>
+      <td>
+        <input type="email" [(ngModel)]="email_id">
+      </td>
+    </tr>
+    <tr>
+      <td>password:</td>
+      <td>
+        <input type="password" [(ngModel)]="password">
+      </td>
+    </tr>
+    <tr>
+      <td>username:</td>
+      <td>
+        <input type="text" [(ngModel)]="user_name">
+      </td>
+    </tr>
+    <tr>
+      <td>phone no:</td>
+      <td>
+        <input type="number" [(ngModel)]="mobile_no">
+      </td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>
+        <input type="text" [(ngModel)]="city">
+      </td>
+    </tr>
+    <tr>
+      <td>gender</td>
+      <td>
+        <input type="radio" name="rtb" value="male" [(ngModel)]="gender">male
+        <input type="radio" name="rtb" value="female" [(ngModel)]="gender">female
+      </td>
+    </tr>
+    <tr>
+      <td>address</td>
+      <td>
+        <input type="text" [(ngModel)]="address">
+      </td>
+    </tr>
+    <br>
+    <tr>
+      &nbsp;
+      <button class="btn btn-primary" (click)="onupdate()">Save</button>
+
+
+    </tr>
+
+
+  </table>
+</div>

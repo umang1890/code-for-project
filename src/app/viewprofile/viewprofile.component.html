@@ -1,0 +1,63 @@
+<b>
+<h1>PROFILE</h1>
+<div class="container">
+    <table >
+      <tr>
+        Email id:
+
+          <input disabled class="form-control input-sm" [(ngModel)]="email_id" type="email">
+
+      </tr>
+      <br>
+      <tr>
+        Password:
+
+          <input disabled type="password" class="form-control input-sm" [(ngModel)]="password">
+
+      </tr>
+      <br>
+      <tr>
+        UserName:
+
+          <input disabled class="form-control input-sm" type="text" [(ngModel)]="user_name">
+
+      </tr>
+      <br>
+      <tr>
+        Phone No:
+
+          <input disabled type="number" class="form-control input-sm" [(ngModel)]="mobile_no">
+
+      </tr>
+      <br>
+      <tr>
+        City
+
+          <input disabled type="text" class="form-control input-mi" [(ngModel)]="city">
+
+      </tr>
+      <br>
+      <tr>
+        Gender
+
+          <input disabled type="radio" name="rtb" value="male" [(ngModel)]="gender">male
+          <input disabled type="radio" name="rtb" value="female" [(ngModel)]="gender">female
+
+      </tr>
+      <br>
+      <tr>
+        Address
+
+          <input disabled type="text" class="form-control input-mi" [(ngModel)]="address">
+
+      </tr><br>
+      <tr>
+         <button routerLink="/editprofile" (click)="updateuser()" class="btn btn-primary">Edit</button>
+        &nbsp; <button routerLink="/changepassword" (click)="changepassword()" class="btn btn-primary">Change Password</button>
+
+        </tr>
+
+
+    </table>
+  </div>
+</b>

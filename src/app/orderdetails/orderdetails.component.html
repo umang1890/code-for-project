@@ -1,0 +1,18 @@
+<div class="container">
+  <table >
+    <tr >
+      <th>BILL NO</th>&nbsp;&nbsp;
+      <th>DISHNAME</th>&nbsp;&nbsp;
+      <th>QTY</th>&nbsp;&nbsp;
+      <th>DISH PRICE</th>&nbsp;&nbsp;
+      <th>Total PRICE</th>&nbsp;&nbsp;
+    </tr>
+    <tr *ngFor="let item of odarr">
+      <td>{{item.fk_bill_no}}</td>&nbsp;&nbsp;
+      <td>{{item.dish_name}}</td>&nbsp;&nbsp;
+      <td>{{item.qty}}</td>&nbsp;&nbsp;
+      <td>{{item.dish_price}}</td>&nbsp;&nbsp;
+      <td>{{item.price}}</td>&nbsp;&nbsp;
+    </tr>
+  </table>
+</div>

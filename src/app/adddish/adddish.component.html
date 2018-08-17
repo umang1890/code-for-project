@@ -1,0 +1,32 @@
+ <b><div class="container">
+  <table >
+
+    <tr>
+      <td>dish name:-</td>
+      <td>
+        <input type="text" [(ngModel)]="dish_name" class="form-control input-mi" >
+      </td>
+    </tr><br>
+    <tr>
+      <td>dish price:-</td>
+      <td>
+        <input type="number" [(ngModel)]="dish_price" class="form-control input-mi">
+      </td>
+    </tr><br>
+    <tr>
+      <td>dish img:-</td>
+
+      <td>
+        <input type="file" (change)="onChange($event)">
+      </td>
+    </tr><br>
+    <tr>
+      <td>cusine id:-</td>
+      <td>
+        <input type="number" [(ngModel)]="cusine_id" class="form-control input-mi">
+      </td>
+    </tr>
+  </table>
+  <button (click)="onadddish()" class="btn btn-primary">ADD</button>
+</div>
+</b>

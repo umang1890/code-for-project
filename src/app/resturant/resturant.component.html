@@ -1,0 +1,93 @@
+<div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li (click)="onclick(item.cusine_name)" *ngFor="let item of arr">
+            <a style="color:indigo; font-size: 20px;">{{item.cusine_name}}
+              <span class="sr-only"></span>
+            </a>
+
+
+          </li>
+          <li  >
+            <a style="color:indigo; font-size: 20px;" (click)="onclickpast()">PastOrder
+              <span class="sr-only"></span>
+            </a>
+
+
+          </li>
+          <li  >
+            <a style="color:indigo; font-size: 20px;" (click)="onadmin()">Admin
+              <span class="sr-only"></span>
+            </a>
+
+
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+
+</div>
+
+<div>
+  <div class="col-sm-8 col-md-3" *ngFor="let item of cudish">
+    <div class="thumbnail" style="background-color: lightblue ">
+
+      <img src="http://localhost:3000/images/dish_img/{{item.dish_img}}" style="height:200px; width:990px;" alt="...">
+
+      <h3>{{item.dish_name}}</h3>
+      <h3>RS.{{item.dish_price}}</h3>
+      <button (click)="ondishselect(item)">Add</button>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-5" style="border:3px solid black ; border-radius: 20px; background-color: lightgrey; height:auto;">
+  <table>
+    <tr>
+      <th>dish name</th>&nbsp;
+      <th>dish price</th>&nbsp;
+      <th>dish qty</th>
+    </tr>
+    <tr *ngFor="let item of itemnamearr;let i=index">
+      <td>{{item.dish_name}}</td>&nbsp;
+      <td>{{pricearr[i]}}</td>&nbsp;
+
+      <td>
+        <select [(ngModel)]="qty[i]" (change)="updateqty(item,i)">
+          <option *ngFor="let item of qtyarr">
+            {{item}}</option>
+        </select>
+      </td>&nbsp;
+
+      <td>
+        <button (click)="ondelete(i)">Delete</button>
+      </td>
+    </tr>
+
+
+  </table>
+  <h1>Total Price</h1>
+  <h1>{{totalprice}}</h1>
+  <button  (click)="onpayment()">Payment</button>
+</div>

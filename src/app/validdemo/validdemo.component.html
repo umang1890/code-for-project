@@ -1,0 +1,56 @@
+<div>
+  <form (ngSubmit)="onsign()" #f="ngForm">
+    <div class="form-group">
+    <tr>
+      <td>
+        <label>email id</label>
+      </td>
+      <td>
+        <input type="email" required name="email_id" emailid #emailid="ngModel" [(ngModel)]="email_id" class="form-control input-mi">
+      </td>
+    </tr>
+    <div>
+      <div [hidden]="emailid.valid || emailid.untouched">
+        <div [hidden]="emailid?.errors?.required">email id invalid</div>
+        <div [hidden]="!emailid?.errors?.required">email id required</div>
+      </div>
+    </div>
+    <tr>
+      <td>user name</td>
+      <td>
+        <input type="text" required name="user_name" username #username="ngModel" [(ngModel)]="user_name"  class="form-control input-mi">
+      </td>
+    </tr>
+    <div>
+        <div [hidden]="username.valid || username.untouched">
+          <div [hidden]="username?.errors?.required">user name id invalid</div>
+          <div [hidden]="!username?.errors?.required">user name required</div>
+        </div>
+      </div>
+
+    <tr>
+      <td>password</td>
+      <td>
+        <input type="next" required name="password" [(ngModel)]="password" class="form-control input-mi">
+      </td>
+    </tr>
+    <tr>
+      <td>mobile no</td>
+      <td>
+        <input type="number" maxlength="10" minlength="10" required name="mobile_no" mobileno #mobileno="ngModel" [(ngModel)]="mobile_no" class="form-control input-mi">
+      </td>
+
+    </tr>
+    <div>
+        <div [hidden]="mobileno.valid || mobileno.untouched">
+          <div [hidden]="!mobileno?.errors?.maxlength">mobile no must have 10 num</div>
+          <div [hidden]="!mobileno?.errors?.minlength">mobile no must have 10 num</div>
+          <div [hidden]="!mobileno?.errors?.required" class="alert alter-danger">mobile no is required</div>
+        </div>
+      </div>
+
+    <button type="submit" [disabled]="!f.valid" class="btn btn-primary">click me</button>
+  </div>
+  </form>
+
+</div>

@@ -1,0 +1,44 @@
+<app-heder></app-heder>
+<h1></h1>
+  <div  class="col"  >
+        <div class="col-sm-8 col-md-3">
+          <div class="thumbnail">
+
+              <img src="{{image}}"  style="height:200px; width:990px;" alt="...">
+              <p>{{p_id}}</p>
+              <h3>{{p_name}}</h3>
+              <h3>RS.{{p_price}}</h3>
+          </div>
+        </div>
+   </div>
+   <br>  <br>  <br>  <br>  <br> <br>  <br>  <br>
+
+   <h3 style = "margin-left:450px;">Related Items </h3>
+
+      <div  class="row" >
+          <div *ngFor="let item of similer" class="col-sm-8 col-md-3">
+            <div class="thumbnail" >
+              <img src='{{item.image}}' alt="...">
+              <div class="caption">
+                  <p>{{item.p_id}}</p>
+                <h3>{{item.p_name}}</h3>
+                <p>RS.{{item.p_price}}
+                <p><a (click)="onsimilercilck(item)" class="btn btn-primary" role="button">View</a></p>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

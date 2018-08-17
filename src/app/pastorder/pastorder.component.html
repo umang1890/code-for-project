@@ -1,0 +1,14 @@
+<div class="container">
+<table *ngFor="let item of pastarr">
+  <tr>
+  <th>Amount</th>&nbsp;
+  <th>Date</th>
+  </tr>
+  <tr >
+  <td>{{item.amount}}</td>&nbsp;
+  <td>{{item.date}}</td>
+<td><button (click)="pastorderdet(item)">View Details</button></td>
+  </tr>
+
+</table>
+</div>

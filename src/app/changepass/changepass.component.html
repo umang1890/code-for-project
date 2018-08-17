@@ -1,0 +1,32 @@
+
+<h1>Change Password</h1>
+<div class="container">
+  <table class="table">
+    <tr>
+
+       <h1 style="font-size: 20px;">Old Password</h1>
+      <input class="form-control input-sm" [(ngModel)]="password" type="password">
+
+    </tr>
+    <tr>
+
+     <h1 style="font-size: 20px;"> New Password </h1>
+
+
+      <input class="form-control input-sm" type="password" [(ngModel)]="newpassword">
+
+    </tr>
+    <tr>
+
+      <h1 style="font-size: 20px;">confirm Password </h1>
+
+
+        <input class="form-control input-sm" type="password" [(ngModel)]="confirmpassword">
+
+      </tr>
+
+    <br>
+    <button class="btn btn-primary" (click)="change()">Save</button>
+
+  </table>
+</div>

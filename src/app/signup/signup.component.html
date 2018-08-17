@@ -1,0 +1,57 @@
+
+<h1>SIGNUP</h1>
+<div class="container ">
+  <table class="form-group row"  >
+    <tr>
+      <td style="font-size:20px; ">Email Id:</td>
+
+        <input type="email" class="form-control input-mi" [(ngModel)]="email_id" >
+
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">password:</td>
+      <td>
+        <input type="password" [(ngModel)]="password" class="form-control input-mi" required>
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">username:</td>
+      <td>
+        <input type="text" [(ngModel)]="user_name" class="form-control input-mi" required>
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">phone no:</td>
+      <td>
+        <input type="number" [(ngModel)]="mobile_no" required class="form-control input-mi">
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">City</td>
+      <td>
+        <input type="text" [(ngModel)]="city" required class="form-control input-mi">
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">gender</td>
+      <td>
+        <input type="radio" name="rtb" value="male" [(ngModel)]="gender">male
+        <input type="radio" name="rtb" value="female" [(ngModel)]="gender">female
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size:20px; ">address</td>
+      <td>
+        <input type="text" [(ngModel)]="address"  class="form-control input-mi">
+      </td>
+    </tr><br>
+    <tr>
+        &nbsp; <button routerLink="login"  class="btn btn-primary">cancel</button>
+      &nbsp; <button (click)="signup()" class="btn btn-primary">SignUp</button>
+
+      </tr>
+
+
+  </table>
+
+</div>

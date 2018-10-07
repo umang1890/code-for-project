@@ -1,0 +1,88 @@
+<div class="container" style="border: 2px solid black;width:auto;height:auto;">
+  <h1>signup</h1>
+  <br>
+  <form>
+    <mat-form-field>
+      <input type="text" placeholder="First Name" firstname name="firstname" ngModel #firstname="ngModel" matInput required>
+      <mat-error *ngIf="firstname.hasError('required')">First Name is required</mat-error>
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+      <input type="text" placeholder="Last Name" lastname name="lastname" ngModel #lastname="ngModel" matInput required>
+      <mat-error *ngIf="lastname.hasError('required')">Last Name is required</mat-error>
+
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input type="email" name="email" ngModel #email="ngModel" matInput placeholder="Enter your Email" required email>
+      <mat-error *ngIf="email.hasError('required')">Enter the email</mat-error>
+      <mat-error *ngIf="!email.hasError('required')">Enter the Invalid</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <input required maxlength="8" name="password" ngModel #password="ngModel" matInput [type]="flag?'password':'text'" type="password"
+        matInput placeholder="Enter your Password">
+      <mat-icon (click)="flag=!flag" matSuffix>{{flag?'visibility':'visibility_off'}}</mat-icon>
+      <mat-hint>Max 8 char</mat-hint>
+      <mat-hint align="end">{{password.value?.length}}/8</mat-hint>
+      <mat-error>Enter the password</mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field>
+      <input type="tel" required name="phonenumber" maxlength="10" ngModel #phonenumber="ngModel" phonenumber matInput placeholder="Enter your Phone Num">
+      <mat-hint align="end">{{phonenumber.value?.length}}/10</mat-hint>
+      <mat-error>Phone number required</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <p>Arival time</p>
+      <input type="datetime-local" matInput>
+    </mat-form-field>&nbsp;
+    <mat-form-field>
+      <p>Living time</p>
+      <input type="datetime-local" matInput>
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+      <p>Select date</p>
+      <input type="date" matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+
+      <input type="text" matInput placeholder="Where do you want to park?">
+      <mat-icon>Search</mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Enter your address" required></textarea>
+    </mat-form-field>
+    <br>
+
+
+    <mat-form-field>
+      <input type="text" matInput placeholder="Enter city name" required>
+    </mat-form-field>
+
+    <p style="font-size: 20px;">I am a</p>
+    <mat-radio-button>House Owner</mat-radio-button>&nbsp;
+    <mat-radio-button>Organization Owner</mat-radio-button>
+    <br>
+    <br>
+    <p style="font-size:20px;">Types Of vehicle</p>
+    <mat-checkbox>Two Wheeler</mat-checkbox>
+    <br>
+    <mat-checkbox>Four Wheeler</mat-checkbox>
+    <br>
+    <mat-checkbox>Havy Vehicle</mat-checkbox>
+
+
+
+
+    <br>
+    <button mat-raised-button color="primary">Ok</button>
+  </form>
+</div>

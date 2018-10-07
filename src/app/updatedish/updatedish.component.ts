@@ -14,6 +14,7 @@ dish_id:number;
 dish_name:string;
 dish_price:number;
 cusine_id:number;
+dish_img:string;
 arrdish:dishclass[]=[];
   ngOnInit() {
     this.dish_id=this._ar.snapshot.params['id'];
@@ -23,11 +24,18 @@ arrdish:dishclass[]=[];
         //this.dish_id=data[0].dish_id;
         this.dish_name=data[0].dish_name;
         this.dish_price=data[0].dish_price;
-
+       this.dish_img=data[0].dish_price.toString();
         //this.cusine_id=data[0].cusine_id;
       }
     )
 
+  }
+  onupdatedish(){
+    this._data.updatedish(new dishclass(this.dish_name,this.dish_price,this.dish_img)).subscribe(
+      (data:dishclass[])=>{
+        alert("data is update")
+      }
+    )
   }
 
 }

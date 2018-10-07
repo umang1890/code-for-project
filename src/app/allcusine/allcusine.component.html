@@ -1,17 +1,26 @@
-<b><div class="container">
-  <table>
-    <tr><td style="font-size: 20px;">cusine id</td>&nbsp;&nbsp;
-    <td style="font-size: 20px;">cusine name</td>&nbsp;&nbsp;
-    </tr>
 
-    <tr *ngFor="let item of cusinearr">
 
-     <td style="font-size: 20px;"> <input type="checkbox"> {{item.cusine_id}}</td>&nbsp;&nbsp;
-      <td style="font-size: 20px;">{{item.cusine_name}}</td>&nbsp;&nbsp;
-      <td><button  class="btn btn-primary" (click)="ondelete(item)">delete</button></td>&nbsp;&nbsp;<br><br>
-      <td><button class="btn btn-primary" (click)="updatecusine(item)">update</button></td>&nbsp;&nbsp;
-    </tr>
-    <button  class="btn btn-primary">DELETE</button>
-  </table>
-</div>
-</b>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
+    <div class="panel-body">
+    </div>
+    <table>
+
+    </table>
+
+    <table class="table">
+        <tr><td style="font-size: 20px;">cusine id</td>
+          <td style="font-size: 20px;">cusine name</td>
+          </tr>
+            <tr *ngFor="let item of cusinearr">
+
+                <td style="font-size: 20px;"> <input type="checkbox"> {{item.cusine_id}}</td>
+                 <td style="font-size: 20px;">{{item.cusine_name}}</td>
+                 <td><button  class="btn btn-primary" (click)="ondelete(item)">delete</button></td>&nbsp;<br><br>
+                 <td><button class="btn btn-primary" (click)="updatecusine(item)">update</button></td>&nbsp;
+               </tr>
+               <button  class="btn btn-primary">DELETE</button>
+
+    </table>
+  </div>

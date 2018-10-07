@@ -22,8 +22,7 @@ arr:user[]=[]
   }
 
   login1() {
-    this._xyz
-      .login11(new user(this.email_id, this.password))
+    this._xyz.login11(new user(this.email_id, this.password))
       .subscribe((data: user[]) => {
         console.log(data);
         if (data.length == 1)

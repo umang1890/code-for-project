@@ -19,7 +19,11 @@ dishurl:string="http://localhost:3000/admindish/";
   deletedish(item:dishclass){
     return this._http.delete(this.dishurl+item.dish_id);
   }
-
+updatedish(item:dishclass){
+  let body=JSON.stringify(item);
+  let h=new HttpHeaders().set('Content-Type','application/json')
+  return this._http.put(this.dishurl+item.dish_id,body,{headers:h});
+}
 
   getdishbyid(id){
     return this._http.get(this.dishurl+id);

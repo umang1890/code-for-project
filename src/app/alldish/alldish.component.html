@@ -1,11 +1,20 @@
-<div class="container">
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading"></div>
+  <div class="panel-body">
+  </div>
   <table>
-    <tr>
-    <td style="font-size: 20px;">DISH ID</td>&nbsp;
-    <td style="font-size: 20px;">DISH NAME</td>&nbsp;
-    <td style="font-size: 20px;">DISH PRICE</td>&nbsp;
-    <td style="font-size: 20px;">DISH IMAGE</td>&nbsp;
-    </tr>
+
+  </table>
+
+  <table class="table">
+      <tr>
+          <td style="font-size: 20px;">DISH ID</td>&nbsp;
+          <td style="font-size: 20px;">DISH NAME</td>&nbsp;
+          <td style="font-size: 20px;">DISH PRICE</td>&nbsp;
+          <td style="font-size: 20px;">DISH IMAGE</td>&nbsp;
+          </tr>
     <tr *ngFor="let item of arrdish">
       <td style="font-size: 20px;"><input type="checkbox"> {{item.dish_id}}</td>&nbsp;
       <td style="font-size: 20px;">{{item.dish_name}}</td>&nbsp;
@@ -16,5 +25,6 @@
       <td><button class="btn btn-primary" (click)="updatedish(item)">UPDATE</button></td>
     </tr>
     <button class="btn btn-primary">DELETE</button>
+
   </table>
 </div>

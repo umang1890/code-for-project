@@ -26,6 +26,10 @@ import { AlldishComponent } from './alldish/alldish.component';
 import { UpdatecusineComponent } from './updatecusine/updatecusine.component';
 import { AdddishComponent } from './adddish/adddish.component';
 import { UpdatedishComponent } from './updatedish/updatedish.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import { MaterialdemoComponent } from './materialdemo/materialdemo.component';
+import { MatButtonModule,MatIconModule, MatFormFieldModule,MatCheckbox, MatCheckboxModule, MatRadioGroupBase, MatRadioModule } from "@angular/material";
 
 
 
@@ -54,13 +58,16 @@ import { UpdatedishComponent } from './updatedish/updatedish.component';
     UpdatecusineComponent,
     AdddishComponent,
     UpdatedishComponent,
+    MaterialdemoComponent,
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MatButtonModule,MatIconModule,MatInputModule, MatFormFieldModule,MatCheckboxModule,MatRadioModule
 
 
 
